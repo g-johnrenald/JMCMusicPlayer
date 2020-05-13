@@ -1,0 +1,127 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainForm" onMouseDragged="#mainFormMouseDraggedHandler" onMousePressed="#mainFormMousePressedHandler" prefHeight="470.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jmcmusicplayer.PlayerController">
+    <children>
+        <AnchorPane  prefHeight="470.0" prefWidth="400.0" style="-fx-background-color: #FC5130;" stylesheets="@stylesheet.css">
+            <children>
+                <HBox prefHeight="24.0" prefWidth="96.0">
+                    <children>
+                        <ImageView id="closeBtn" fx:id="closeBtn" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#closeBtnHandler" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/close_btn.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView id="miniBtn" fx:id="miniBtn" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#miniBtnHandler" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/mini_btn.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView id="helpBtn" fx:id="helpBtn" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#helpBtnHandler" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/help_btn.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <ImageView id="icon" fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/images/headphone-icon.png" />
+                    </image>
+                </ImageView>
+                <HBox layoutX="133.0" layoutY="369.0" prefHeight="42.0" prefWidth="133.0" AnchorPane.bottomAnchor="32.0">
+                    <children>
+                        <ImageView id="rewindBtn" fx:id="rewindBtn" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#rewindBtnHandler" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/rewind_btn.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets top="25.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <ToggleButton id="playToggle" fx:id="playToggle" mnemonicParsing="false" onMouseClicked="#playToggleHandler">
+                            <HBox.margin>
+                                <Insets top="15.0" />
+                            </HBox.margin>
+                        </ToggleButton>
+                        <ImageView id="forwardBtn" fx:id="forwardBtn" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#forwardBtnHandler" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/forward_btn.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets top="25.0" />
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <Label fx:id="nowPlaying" layoutX="89.0" layoutY="339.0" prefHeight="30.0" prefWidth="220.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="89.0" AnchorPane.rightAnchor="88.0" AnchorPane.topAnchor="339.0">
+                    <font>
+                        <Font name="Courier New" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="400.0" prefHeight="470.0" prefWidth="200.0" style="-fx-background-color: #303036;" stylesheets="@stylesheet.css">
+            <children>
+                <HBox layoutX="40.0" layoutY="14.0" prefHeight="30.0" prefWidth="160.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <TextField id="searchField" fx:id="searchField" onKeyPressed="#searchFieldHandler" style="-fx-text-fill: #FFFAFF; -fx-border-style: hidden hidden dotted hidden; -fx-border-color: #FFFAFF;">
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                            <HBox.margin>
+                                <Insets top="4.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <ImageView id="searchBtn" fx:id="searchBtn" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#searchBtnHandler" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/search_btn.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets top="5.0" />
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <ListView id="playlist" fx:id="playlist" layoutX="4.0" layoutY="45.0" prefHeight="380.0" prefWidth="195.0" style="-fx-background-color: #303036; -fx-text-fill: #FFFAFF;" />
+                <HBox layoutX="7.0" layoutY="425.0" prefHeight="20.0" prefWidth="150.0" spacing="10.0">
+                    <children>
+                        <ImageView id="sortBtn" fx:id="sortBtn" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#sortBtnHandler" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/sort_btn.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView id="opnBtn" fx:id="opnBtn" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#opnBtnHandler" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/open_btn.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView id="saveBtn" fx:id="saveBtn" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#saveBtnHandler" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/save_btn.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView id="addBtn" fx:id="addBtn" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#addBtnHandler" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/add_btn.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView id="trashBtn" fx:id="trashBtn" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#trashBtnHandler" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/trash_btn.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

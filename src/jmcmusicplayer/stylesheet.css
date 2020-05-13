@@ -1,0 +1,175 @@
+/*
+Copyright 2020 John Renald Garcines
+Diploma of Software Development
+South Metropolitan TAFE Murdoch Campus
+*/
+/*
+    Created on : 2020/04/25, 18:25:16
+    Author     : John
+*/
+.text-field{
+    -fx-background-color: #303036;
+    -fx-text-fill: #FFFAFF;
+}
+
+.list-cell {
+    -fx-background-color: #303036;
+    -fx-text-fill: #FFFAFF;
+    -fx-font-family: Courier;
+    -fx-font-size: 15px;
+}
+
+.list-cell:selected {
+    -fx-background-color: #FC5130;
+    -fx-text-fill: #FFFAFF
+}
+
+.list-cell:hover {
+    -fx-background-color: #FC5130;
+    -fx-text-fill: #FFFAFF
+}
+
+.list-cell:hover:empty {
+    -fx-background-color: #303036;
+    -fx-text-fill: #FFFAFF
+}
+
+.label{
+    -fx-text-alignment: center;
+}
+
+#icon{
+    -fx-background-image: url(/images/headphone-icon.png);
+}
+
+#opnBtn{
+    -fx-image: url(/images/open_btn.png);
+}
+
+#opnBtn:hover{
+    -fx-image: url(/images/open_btn_hover.png);
+}
+
+#addBtn{
+    -fx-image: url(/images/add_btn.png);
+}
+
+#addBtn:hover{
+    -fx-image: url(/images/add_btn_hover.png);
+}
+
+#trashBtn{
+    -fx-image: url(/images/trash_btn.png);
+}
+
+#trashBtn:hover{
+    -fx-image: url(/images/trash_btn_hover.png);
+}
+
+#saveBtn{
+    -fx-image: url(/images/save_btn.png);
+}
+
+#saveBtn:hover{
+    -fx-image: url(/images/save_btn_hover.png);
+}
+
+#sortBtn{
+    -fx-image: url(/images/sort_btn.png);
+}
+
+#sortBtn:hover{
+    -fx-image: url(/images/sort_btn_hover.png);
+}
+
+#searchBtn{
+    -fx-image: url(/images/search_btn.png);
+}
+
+#searchBtn:hover{
+    -fx-image: url(/images/search_btn_hover.png);
+}
+
+#playBtn{
+    -fx-image: url(/images/play_btn.png);
+}
+
+#playBtn:hover{
+    -fx-image: url(/images/pause_btn_hover.png);
+}
+
+#playToggle{
+    -fx-graphic: url(/images/play_btn.png);
+    -fx-background-color: transparent;
+}
+
+#playToggle:hover{
+    -fx-graphic: url(/images/play_btn_hover.png);
+}
+
+#playToggle:selected{
+    -fx-graphic: url(/images/pause_btn.png);
+}
+
+#playToggle:selected:hover{
+    -fx-graphic: url(/images/pause_btn_hover.png);
+}
+
+#forwardBtn{
+    -fx-image: url(/images/forward_btn.png);
+}
+
+#forwardBtn:hover{
+    -fx-image: url(/images/forward_btn_hover.png);
+}
+
+#rewindBtn{
+    -fx-image: url(/images/rewind_btn.png);
+}
+
+#rewindBtn:hover{
+    -fx-image: url(/images/rewind_btn_hover.png);
+}
+
+#closeBtn{
+    -fx-image: url(/images/close_btn.png);
+}
+
+#closeBtn:hover{
+    -fx-image: url(/images/close_btn_hover.png);
+}
+
+#miniBtn{
+    -fx-image: url(/images/mini_btn.png);
+}
+
+#miniBtn:hover{
+    -fx-image: url(/images/mini_btn_hover.png);
+}
+
+#helpBtn{
+    -fx-image: url(/images/help_btn.png);
+}
+
+#helpBtn:hover{
+    -fx-image: url(/images/help_btn_hover.png);
+}
+
+#userImg{
+    -fx-image: url(/images/user_img.png);
+}
+
+#passwordImg{
+    -fx-image: url(/images/password_img.png);
+}
+
+#loginBtn{
+    -fx-graphic: url(/images/login_btn.png);
+
+}
+
+#loginBtn:hover{
+    -fx-graphic: url(/images/login_btn_hover.png);
+}
+
+
